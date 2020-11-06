@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+      <string-array name="t1">
+    <item>峨眉山</item>
+        <item>华山</item>
+         <item>太行山</item>
+        <item>武夷山</item>
+      </string-array>
+
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+  <!--  <string name="your_hobbies_info">你选择的兴趣爱好是:<xliff:g id = "hobbies">%s<xliff:g></string>-->
+
+</resources>

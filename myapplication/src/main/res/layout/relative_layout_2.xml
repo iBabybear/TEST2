@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="10dp"
+    android:paddingLeft="10dp"
+    >
+
+   <LinearLayout
+       android:id="@+id/vote_1"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="请投票旅游景点:"
+           android:background="@android:color/holo_blue_light"
+           android:textSize="20sp"
+           />
+
+<!--       RadioGroup封装 使其只能选择一个button按钮-->
+       <RadioGroup
+           android:id="@+id/visit_place_rg"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:paddingLeft="5dp"
+           android:paddingRight="5dp">
+
+           <RadioButton
+               android:id="@+id/place1"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="峨眉山"/>
+           <RadioButton
+               android:id="@+id/place2"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="华山"/>
+           <RadioButton
+               android:id="@+id/place3"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="太行山"/>
+           <RadioButton
+               android:id="@+id/place4"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="武夷山"/>
+
+
+       </RadioGroup>
+   </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/vote_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vote_1"
+        android:layout_marginTop="-3dp"
+        android:orientation="vertical"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请选择兴趣爱好:"
+            android:textSize="20sp" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="阅读"
+            android:textSize="20sp" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="旅游"
+            android:textSize="20sp" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="追剧"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/user_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vote_2"
+        android:layout_marginTop="-3dp"
+        android:orientation="horizontal"
+        android:paddingTop="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="姓名:"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:maxLength="10"
+            android:maxLines="1" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:maxHeight="50dp"
+            android:src="@drawable/ic_launcher_background" />
+<!--            android:src="@drawable/abc_vector_test" />-->
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/progress_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/user_info"
+        android:gravity="center">
+
+        <ProgressBar
+        android:id="@+id/progress1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:max="100"
+        />
+
+        <ProgressBar
+            android:id="@+id/progress2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:max="100"
+            />
+
+        <Button
+            android:id="@+id/plus_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"/>
+
+        <Button
+            android:id="@+id/substract_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"/>
+    </LinearLayout>
+
+
+
+
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_light"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp"
+        android:text="提交"
+        />
+
+</RelativeLayout>
